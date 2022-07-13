@@ -6,6 +6,8 @@
 
 ```bash
 go install github.com/rtemka/gencert@latest
+```
+```bash
 gencert -host <host-name> -cert <public-key-filename> -key <private-key-filename> -org <org-name> -days <NUM-days>
 ```
 
