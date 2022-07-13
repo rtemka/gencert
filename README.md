@@ -5,7 +5,7 @@
 #### Пример использования
 
 ```bash
-go install https://github.com/rtemka/gencert.git@latest
+go install github.com/rtemka/gencert@latest
 gencert -host <host-name> -cert <public-key-filename> -key <private-key-filename> -org <org-name> -days <NUM-days>
 ```
 
@@ -13,7 +13,7 @@ gencert -host <host-name> -cert <public-key-filename> -key <private-key-filename
 
 Работает аналогично утилите ``generate_cert.go`` из пакета стандартной библиотеки golang [``crypto/tls``](https://pkg.go.dev/crypto/tls).
 
-Основная разница в том, что эта утилита создает пару ключей, которые могут использоваться как сервером, так и клиентом, для создания так называемого [``mutual TLS authentication (mTLS)``](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/).
+Основная разница в том, что эта утилита создает пару ключей, которые могут использоваться и клиентом, для создания так называемого [``mutual TLS authentication (mTLS)``](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/).
 
 Другие изменения: 
  1. Можно менять название организации в сертификате через ключ ``-org``, 
